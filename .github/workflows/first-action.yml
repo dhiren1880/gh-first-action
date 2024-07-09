@@ -1,4 +1,4 @@
-name: CI
+name: First-Workflow
 on: workflow_dispatch
 jobs:  
   first-job:
@@ -7,4 +7,4 @@ jobs:
       - name: Print greeting
         run: echo "Hello World!"
       - name: Print GoodBye
-        run: echo "Done Bye"
+        run: echo "Done"
