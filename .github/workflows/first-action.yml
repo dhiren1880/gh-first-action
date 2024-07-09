@@ -8,5 +8,5 @@ jobs:
         run: echo "Hello World!"
       - name: Print GoodBye
         run |
-            echo "First output"
-            echo "Second output"
+          echo "First output"
+          echo "Second output"
