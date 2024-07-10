@@ -5,12 +5,21 @@ on:
     branches:
       - 'main'
 jobs:  
-  first-job:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: get code
         uses: actions/checkout@v4
-      - name: Print greeting
+      - name: build code
         run: echo "Hello World!"
-      - name: Print GoodBye
+      - name: create package
+        run: echo "First output"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/checkout@v4
+      - name: test code
+        run: echo "Hello World!"
+      - name: deploy code
         run: echo "First output"
