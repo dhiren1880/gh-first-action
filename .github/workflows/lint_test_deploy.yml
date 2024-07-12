@@ -1,0 +1,33 @@
+name: basic exercise
+# on: workflow_dispatch
+on: push
+jobs:  
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/checkout@v4
+      - name: build code
+        run: echo "Hello World!"
+      - name: create package
+        run: echo "First output"
+  test:
+  # needs used to run jobs in sequential manner, once build completed
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/checkout@v4
+      - name: test code
+        run: echo "Hello World!"
+      - name: deploy code
+        run: echo "First output
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/checkout@v4
+      - name: build code
+        run: echo "Hello World!"
+      - name: create package
+        run: echo "First output"
